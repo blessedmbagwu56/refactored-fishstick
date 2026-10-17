@@ -1,0 +1,341 @@
+@import "variables";
+
+// ************************************//
+// Base/General //
+// ************************************//
+*,
+*::after *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.step-number {
+  font-weight: 600;
+  font-family: "Fraunces", serif;
+}
+
+p,
+a {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s;
+  width: 35%;
+  background-color: $color-green;
+  margin-block-start: 4rem;
+  margin-inline: auto;
+  padding: 2rem;
+  cursor: pointer;
+
+  &::selection {
+    color: $color-dark;
+    background-color: inherit;
+  }
+
+  &:hover {
+    background-color: inherit;
+    border: 3px dotted rgba($color-green, 0.9);
+    color: $color-white;
+    justify-content: center;
+    gap: 1rem;
+
+    .icon {
+      display: block;
+    }
+  }
+
+  &:active {
+    background-color: rgba($color-green, 0.8);
+  }
+
+  .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: none;
+  }
+}
+
+// ************************************//
+// Hero //
+// ************************************//
+
+.section-hero {
+  margin-block-end: 40rem;
+  position: relative;
+  background-color: $color-purple;
+
+  &::selection {
+    color: $color-green;
+    background-color: inherit;
+  }
+
+  .hero {
+    position: relative;
+    padding: 8rem 10rem;
+    margin-inline: auto;
+    max-width: 144rem;
+
+    .bg-pattern-1 {
+      position: absolute;
+      left: -4%;
+      top: 30%;
+    }
+
+    .bg-pattern-2 {
+      position: absolute;
+      left: 89%;
+      top: 30%;
+      transform: translate(-5%, 25%);
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        cursor: pointer;
+      }
+
+      .header-nav {
+        border-bottom: 4px solid $color-green;
+        padding-bottom: 0.5rem;
+
+        .btn:link,
+        .btn:visited {
+          font-size: 1.8rem;
+          transition: all 0.3s;
+          color: $color-white;
+          text-transform: capitalize;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-green;
+          }
+
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .header--text-box {
+      max-width: 50rem;
+      margin: 15rem auto 20rem auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .heading-primary {
+        font-size: 5.6rem;
+        color: $color-white;
+
+        backface-visibility: hidden;
+
+        &--main {
+          display: block;
+          font-weight: 400;
+
+          .unique {
+            border-bottom: 4px solid $color-green;
+          }
+        }
+
+        &--sub {
+          display: block;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .image-hero {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+
+    transform: translate(-50%, 50%);
+  }
+}
+
+// ************************************//
+// Background//
+// ************************************//
+.grey-background {
+  width: 87%;
+  height: 100%;
+  position: absolute;
+  background-color: $color-grey;
+  transform: translate(15%, -95%);
+  z-index: -1;
+}
+
+// ************************************//
+// How it Works//
+// ************************************//
+.section-steps {
+  padding: 0 9.5rem 9.5rem 9.5rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    align-items: baseline;
+
+    .first-step,
+    .step-two,
+    .step-three {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
+      justify-self: center;
+
+      .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        font-size: 2.4rem;
+        border-radius: 50rem;
+        width: 5rem;
+        height: 5rem;
+        border: 1px solid $color-dark;
+      }
+
+      .heading-secondary {
+        color: $color-purple;
+        font-size: 2.6rem;
+      }
+
+      p {
+        color: $color-purple;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// ************************************//
+// Call to Action//
+// ************************************//
+.section-cta {
+  padding: 0 9.6rem;
+
+  .cta {
+    margin: auto;
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    .container {
+      background-color: $color-purple;
+      margin-inline-start: -10rem;
+      margin-block-start: 30rem;
+      padding: 8rem 5rem;
+
+      position: relative;
+
+      max-width: 65rem;
+      width: 100%;
+
+      h2 {
+        font-size: 2.8rem;
+        color: $color-white;
+        margin-block-end: 2rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        max-width: 53rem;
+        width: 100%;
+        color: $color-white;
+      }
+
+      .bg-pattern-3 {
+        position: absolute;
+        transform: translate(130%, -30%);
+      }
+
+      .hero-btn {
+        margin-inline: 0;
+      }
+    }
+
+    .avatar {
+      width: 45%;
+      height: auto;
+    }
+  }
+}
+
+// ************************************//
+// Footer//
+// ************************************//
+.footer {
+  padding: 6.4rem;
+
+  .container {
+    margin: auto;
+    text-align: center;
+    max-width: 114rem;
+
+    .footer-logo {
+      margin-block-end: 4rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-block-end: 2rem;
+
+      .social-link img {
+        width: 3.2rem;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@import "./queries";

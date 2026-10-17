@@ -1,0 +1,264 @@
+@import "variables";
+
+// ************************************//
+// Below 1260px (Laptops)//
+// ************************************//
+
+@media (max-width: 81em) {
+  .section-hero .image-hero {
+    width: 80%;
+  }
+
+  .avatar {
+    width: 20%;
+  }
+}
+
+// ************************************//
+// Below 1150px (Tablets)//
+// ************************************//
+@media (max-width: 71.875em) {
+  html {
+    font-size: 55%;
+  }
+
+  .section-steps {
+    padding: 0 5.4rem 3.4rem 5.4rem;
+
+    .grid {
+      width: 100%;
+
+      .first-step,
+      .step-three {
+        justify-content: flex-start;
+      }
+
+      .step-two {
+        justify-content: center;
+      }
+    }
+  }
+
+  .section-cta {
+    padding: 3.4rem 0;
+    .cta {
+      align-items: start;
+
+      .container {
+        padding-inline: 5rem;
+        margin-inline-start: -10rem;
+        margin-block-start: 20rem;
+
+        .hero-btn {
+          &:hover {
+            .icon {
+              display: none;
+            }
+          }
+        }
+
+        .bg-pattern-3 {
+          transform: translate(80%, -30%);
+        }
+      }
+    }
+  }
+}
+
+// ************************************//
+// Below 900px (Tablets)
+// ************************************//
+@media (max-width: 56em) {
+  .section-hero {
+    margin-block-end: 0rem;
+
+    .hero {
+      .bg-pattern-1 {
+        transform: translateX(-20%);
+        width: 35%;
+      }
+    }
+  }
+
+  .section-steps {
+    background-color: $color-grey;
+    padding-inline: 3rem;
+    padding-block: 18rem 9.4rem;
+    margin-block: 0rem 5rem;
+  }
+
+  .grey-background {
+    display: none;
+  }
+
+  .section-cta {
+    padding: 0 3.4rem;
+
+    .cta {
+      max-width: 100%;
+      align-items: start;
+
+      .container {
+        margin-inline-start: -10rem;
+        margin-block-start: 20rem;
+
+        .hero-btn {
+          &:hover {
+            .icon {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .bg-pattern-3 {
+        transform: translate(130%, -30%);
+      }
+    }
+  }
+
+  .section-steps {
+    .grid {
+      grid-template-columns: 1fr;
+      row-gap: 5rem;
+
+      .first-step,
+      .step-two,
+      .step-three {
+        max-width: 100%;
+        width: 100%;
+        text-align: start;
+        display: flex;
+        flex-direction: row;
+
+        .step {
+          width: 80%;
+        }
+
+        h2 {
+          margin-block-end: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// ************************************//
+// Below 636px (Tablets)
+// ************************************//
+@media (max-width: 39em) {
+  .section-hero {
+    .hero {
+      padding-inline: 3.4rem;
+
+      .header--text-box {
+        margin-block-end: 8rem;
+      }
+
+      .image-hero {
+        max-width: 60%;
+        width: 100%;
+        transform: translate(30%, -20%);
+        position: absolute;
+      }
+    }
+  }
+
+  .section-cta {
+    .cta {
+      flex-direction: column;
+
+      .container {
+        margin-inline-start: 0rem;
+        margin-block-start: -5rem;
+      }
+
+      .avatar {
+        width: 60%;
+        display: flex;
+        align-items: end;
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+// ************************************//
+// Below 535px (Mobile)
+// ************************************//
+@media (max-width: 33.3125em) {
+  html {
+    font-size: 45.5%;
+  }
+
+  .hero-btn {
+    display: none;
+  }
+
+  .section-hero {
+    .hero {
+      .header--text-box {
+        margin-block-start: 8rem;
+
+        .heading-primary {
+          font-size: 4.8rem;
+        }
+
+        .hero-btn {
+          width: 50%;
+          margin-block-start: 3rem;
+        }
+      }
+
+      .image-hero {
+        max-width: 85%;
+        width: 100%;
+        transform: translate(5%, -20%);
+      }
+    }
+  }
+
+  .section-steps {
+    .grid {
+      grid-template-columns: 1fr;
+
+      .first-step,
+      .step-two,
+      .step-three {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 4rem;
+
+        .step {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .section-cta {
+    padding: 0 3.4rem;
+
+    .cta {
+      width: 100%;
+
+      .container {
+        text-align: center;
+
+        .hero-btn {
+          width: 50%;
+          margin-inline: auto;
+        }
+      }
+
+      .bg-pattern-3 {
+        display: none;
+      }
+
+      .avatar {
+        width: 70%;
+      }
+    }
+  }
+}
