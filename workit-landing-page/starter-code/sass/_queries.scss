@@ -41,11 +41,12 @@
 
   .section-cta {
     padding: 3.4rem 0;
+
     .cta {
       align-items: start;
 
       .container {
-        padding-inline: 5rem;
+        padding-inline-start: 5rem;
         margin-inline-start: -10rem;
         margin-block-start: 20rem;
 
@@ -58,7 +59,7 @@
         }
 
         .bg-pattern-3 {
-          transform: translate(80%, -30%);
+          transform: translate(100%, -30%);
         }
       }
     }
@@ -125,8 +126,6 @@
       .first-step,
       .step-two,
       .step-three {
-        max-width: 100%;
-        width: 100%;
         text-align: start;
         display: flex;
         flex-direction: row;
@@ -157,9 +156,6 @@
 
       .image-hero {
         max-width: 60%;
-        width: 100%;
-        transform: translate(30%, -20%);
-        position: absolute;
       }
     }
   }
@@ -169,7 +165,7 @@
       flex-direction: column;
 
       .container {
-        margin-inline-start: 0rem;
+        margin-inline: auto;
         margin-block-start: -5rem;
       }
 
@@ -178,6 +174,10 @@
         display: flex;
         align-items: end;
         margin-inline: auto;
+      }
+
+      .bg-pattern-3 {
+        display: none;
       }
     }
   }
@@ -191,14 +191,10 @@
     font-size: 45.5%;
   }
 
-  .hero-btn {
-    display: none;
-  }
-
   .section-hero {
     .hero {
       .header--text-box {
-        margin-block-start: 8rem;
+        margin-block: 8rem;
 
         .heading-primary {
           font-size: 4.8rem;
@@ -206,14 +202,12 @@
 
         .hero-btn {
           width: 50%;
-          margin-block-start: 3rem;
         }
       }
 
       .image-hero {
         max-width: 85%;
         width: 100%;
-        transform: translate(5%, -20%);
       }
     }
   }
@@ -250,10 +244,6 @@
           width: 50%;
           margin-inline: auto;
         }
-      }
-
-      .bg-pattern-3 {
-        display: none;
       }
 
       .avatar {
